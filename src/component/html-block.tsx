@@ -6,6 +6,9 @@ interface HTMLBlockProps{
 }
 
 const HTMLBlock = (props: HTMLBlockProps) => {
+    function copyToClipboard(){
+        console.log(props.template);
+    }
     return(
         <div className={styles.html_block}>
             <p>{props.template}</p>
@@ -19,7 +22,7 @@ const HTMLBlock = (props: HTMLBlockProps) => {
                 padding: 5px; <br />
                 &#125;
             </code>
-            <button type="button">Copy me</button>
+            <button type="button" onClick={copyToClipboard}>Copy me</button>
         </div>
     )
 }

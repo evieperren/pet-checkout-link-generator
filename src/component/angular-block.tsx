@@ -6,7 +6,7 @@ interface AngularBlockProps {
 }
 
 const AngularBlock = (props: AngularBlockProps) => {
-    function copytoclipboard(){
+    function copyToClipboard(){
         console.log(props.template);
     }
     return(
@@ -14,7 +14,7 @@ const AngularBlock = (props: AngularBlockProps) => {
             <code>
                {props.template}
             </code>
-            <button type="button" onClick={copytoclipboard}>Copy me</button>
+            <button type="button" onClick={copyToClipboard}>Copy me</button>
         </div>
     )
 }

@@ -20,12 +20,12 @@ const Form = (props: FormProps) => {
     function handleText(eventArg: React.FormEvent<HTMLInputElement>):void{
         setText(eventArg.currentTarget.value);
     }
-    function copyToClipboard(){
-        const templatestring = "<a href=http:\\somedomain.co.uk?practiceId=<PLACEHOLDER> target=_blank />";
-        const finalString = templatestring.replace("<PLACEHOLDER>", practiceID);
-        const finalString2 = `<a href="${practiceID}">Click here</a>`;
-        console.log(finalString);
-    }
+    // function copyToClipboard(){
+    //     const templatestring = "<a href=http:\\somedomain.co.uk?practiceId=<PLACEHOLDER> target=_blank />";
+    //     const finalString = templatestring.replace("<PLACEHOLDER>", practiceID);
+    //     const finalString2 = `<a href="${practiceID}">Click here</a>`;
+    //     console.log(finalString);
+    // }
     return(
       <Fragment>
           <label>{props.title}</label>
@@ -35,7 +35,7 @@ const Form = (props: FormProps) => {
           <input type="text" value={text} onChange={handleText}/>
           <br/>
           <HTMLBlock template={`<div className='your-link'><a href=${practiceID}>${text}</a></div>`}/>
-          <ButtonBlock template={` <a href="${practiceID}">${text}</a>`}/>
+          <ButtonBlock template={`<a href="${practiceID}">${text}</a>`}/>
           <ReactBlock template={`<Link to=/${practiceID}>${text}</Link>`}/>
           <AngularBlock template={`<a ng-href="${practiceID}">${text}</a>`}/>
       </Fragment>
