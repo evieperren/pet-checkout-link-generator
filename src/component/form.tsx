@@ -1,10 +1,8 @@
 import React, { Fragment , useState} from 'react';
 // import styles from './form.module.scss';
 // import * as copy from 'copy-to-clipboard';
-import HTMLBlock from './html-block';
-import ButtonBlock from './button-block';
-import ReactBlock from './react-block';
-import AngularBlock from './angular-block';
+import Template from './template';
+
 interface FormProps {
     title: string;
     description: string;
@@ -34,10 +32,10 @@ const Form = (props: FormProps) => {
           <label>Choose your text</label>
           <input type="text" value={text} onChange={handleText}/>
           <br/>
-          <HTMLBlock template={`<div className='your-link'><a href=${practiceID}>${text}</a></div>`}/>
-          <ButtonBlock template={`<a href="${practiceID}">${text}</a>`}/>
-          <ReactBlock template={`<Link to=/${practiceID}>${text}</Link>`}/>
-          <AngularBlock template={`<a ng-href="${practiceID}">${text}</a>`}/>
+          <Template template={`<div className="your-link"><a href="${practiceID}">${text}</a></div>`}/>
+          <Template template={`<a href="${practiceID}">${text}</a>`}/>
+          <Template template={`<Link to="/${practiceID}">${text}</Link>`}/>
+          <Template template={`<a ng-href="${practiceID}">${text}</a>`}/>
       </Fragment>
     )
 }
