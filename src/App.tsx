@@ -1,24 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styles from "./App.module.scss";
+import Form from "./component/form";
 
 const App: React.FC = () => {
+  console.log('render app');
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className={styles.outer_container}>
+        <div className={styles.header_container}><h1>header placeholder</h1></div>
+        <div className={styles.main_container}>
+         <Form title="Fill in your practice ID" description="Example = 123456" ></Form>
+        </div>
+        <div className={styles.footer_container}>Footer placeholders</div>
+      </div>
     </div>
   );
 }
