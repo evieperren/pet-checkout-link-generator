@@ -1,20 +1,27 @@
-import React from 'react';
+import React from "react";
 import styles from "./App.module.scss";
-import Form from "./component/form";
+import LinkGenerator from "./pages/link-generator/link-generator"
+
+import VetPractice from "./pages/vet-practice/vet-practice";
+import Title from "./component/title/title";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+
+import logo from "./assets/images/animal-healthcare.png";
 
 const App: React.FC = () => {
   console.log('render app');
 
   return (
-    <div className="App">
-      <div className={styles.outer_container}>
-        <div className={styles.header_container}><h1>header placeholder</h1></div>
-        <div className={styles.main_container}>
-         <Form title="Fill in your practice ID" description="Example = 123456" ></Form>
-        </div>
-        <div className={styles.footer_container}>Footer placeholders</div>
+    <Router>
+      <div className={styles.header_container}>
+        <img src={logo} alt="animal healthcare logo" className={styles.logo}/>
       </div>
-    </div>
+      <Title></Title>
+      <Switch>
+        <Route exact path="/" component={LinkGenerator}></Route>
+        <Route path="/vets-practice" component={VetPractice}></Route>
+      </Switch>
+    </Router>
   );
 }
 

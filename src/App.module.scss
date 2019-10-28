@@ -1,14 +1,22 @@
+@import "./assets/base/typograghy";
+@import "./assets/base/colour";
+
+body {
+  font-family: $font-family;
+  margin: 0;
+  font-size: $font-size;
+}
 .outer_container {
   display: grid;
   grid-template-rows: auto 1fr auto;
   min-height: 100vh;
 }
 .header_container {
-
+  border-bottom: 1px solid $border-lighter;
+  text-align: left;
+  box-shadow: 0 0 #fff;
 }
-.main_container {
-   
-}
-.footer_container {
-
+.logo{
+  width: 270px;
+  padding: 5px 0 5px 5%
 }

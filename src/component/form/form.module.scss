@@ -1,0 +1,101 @@
+@import "../../assets/base/typograghy";
+@import "../../assets/base/media-queries";
+@import "../../assets/base/colour";
+
+.block {
+    background-color: $border-lightest;
+    padding: 10px;
+    margin: 10px;
+}
+button {
+    background-color: #fff;
+    border-radius: 20px;
+    position: relative;
+    padding: 5px;
+    font-size: $font-size;
+    font-family: $font-family; 
+}
+.input_container {
+    margin: 20px;
+}
+.input {
+  border: 1px solid $border-light;
+  line-height: 25px;
+  font-size: $font-size;
+  width: 100%;
+}
+.example_container {
+    border: 1px solid $border-light;
+    height: 100px;
+    margin: 20px;
+}
+.large a{
+    border: 1px solid $border-light;
+    width: 30px;
+    font-size: 70px;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 5px;
+    font-family: $font-family; 
+}
+.medium a{
+    font-size: 20px;
+    border: 1px solid $border-light;
+    width: 30px;
+    font-size: 50px;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 5px;
+    font-family: $font-family; 
+}
+.small a{
+    font-size: 5px;
+    border: 1px solid $border-light;
+    width: 30px;
+    font-size: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 5px;
+    font-family: $font-family; 
+}
+.example {
+    color: black;
+    text-decoration: none;
+}
+.close {
+    float: right;
+    border: 1px solid transparent;
+    color: $border-lighter;
+}
+
+
+@media only screen and (min-width: $medium-min-width) {
+    .form_container {
+        display: grid;
+        grid-template-columns: 0.25fr 1fr 0.25fr;
+        position: fixed;  
+        width: 100%;  
+        top: 0;  
+        left: 0;  
+        right: 0;  
+        bottom: 0;  
+        margin: auto;  
+        background-color: rgba(0,0,0, 0.5);
+    }
+    .link_container {
+        grid-column-start: 2;
+        border: 1px solid $border-lighter;
+        padding: 10px;
+        position: absolute;  
+        left: 5%;  
+        right: 25%;  
+        top: 25%;    
+        margin: auto;  
+        border-radius: 5px;  
+        background: white; 
+    }
+    .input{
+        width: 300px;
+        display: block;
+    }
+}
