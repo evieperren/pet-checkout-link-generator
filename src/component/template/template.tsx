@@ -7,13 +7,12 @@ interface TemplateProps{
 }
 
 const Template = (props: TemplateProps) => {
-    const [textValue, setTextValue] = useState('Copy me')
-    
+    const [textValue, setTextValue] = useState('Copy me');
+
     function copyToClipboard(){
         copy(props.template);
         setTextValue('Copied!')
     }
-    
     return(
         <div className={styles.block}>
             <p id="my-text-area">{props.template}</p>

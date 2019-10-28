@@ -1,0 +1,28 @@
+.code_container {
+    background-color: #000;
+    padding: 30px;
+    width: 600px;
+    overflow: scroll;
+    margin: 0 auto;
+}
+pre {
+    margin: 0;
+}
+.blue {
+    color: blue;
+}
+.first_indent {
+    color: blue;
+    padding-left: 20px;
+}
+.second_indent{
+    color: blue;
+    padding-left: 40px;
+}
+.third_indent {
+    color: blue;
+    padding-left: 60px;
+}
+.white {
+    color: #fff;
+}

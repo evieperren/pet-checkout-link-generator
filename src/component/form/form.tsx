@@ -57,7 +57,9 @@ const Form = () => {
             {popup && (
                 <div className={styles.form_container}>
                     <div className={styles.link_container}>
-                        <button onClick={() => setPopup(false)} className={styles.close}>{CloseIcon}</button>
+                        <a onClick={() => setPopup(false)} className={styles.close}>
+                            <img className={styles.closeIcon} src={CloseIcon} alt='close popup box'/>
+                        </a>
                         <h2>Step one</h2>
                         <p>For HTML...</p>
                         <Template template={`<div class="${uniqueClassname}"><a href="${practiceID}">${text}</a></div>`} />
