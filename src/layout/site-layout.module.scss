@@ -1,0 +1,33 @@
+@import "../assets/base/colour";
+@import "../assets/base/typograghy";
+@import "../assets/base/responsive";
+
+body {
+  font-family: $font-family;
+  margin: 0;
+  font-size: $font-size;
+}
+.header_container {
+  border-bottom: 1px solid $border-lighter;
+  text-align: left;
+  box-shadow: 0 0 #fff;
+}
+.content_outer_container {
+  display: grid;
+  grid-template-columns: auto 1fr auto; 
+  grid-template-rows: 1fr;
+  grid-template-areas: "checkout checkout checkout"; 
+  padding: 0 1rem;
+}
+.logo{
+    width: 270px;
+    padding: 5px 0 5px 5%
+}
+@media only screen and (min-width: $medium-min-width) {
+    .outer_content_container{
+        display: grid;
+        grid-template-columns: 2fr 8fr 2fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "left checkout right";
+    }
+}

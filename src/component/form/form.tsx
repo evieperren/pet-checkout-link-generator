@@ -1,6 +1,7 @@
 import React, {useState, Fragment, useEffect} from 'react';
 import styles from './form.module.scss';
 import Template from '../template/template';
+import FullExample from "../full-example/full-example";
 
 import CloseIcon from '../../assets/images/times-solid.svg';
 
@@ -45,14 +46,14 @@ const Form = () => {
                     <option value={styles.medium}>Medium</option>
                     <option value={styles.small}>Small</option>
                 </select>
-            </div>
-            <div className={styles.example_container}>
-                <div className={classname}>
-                    <a id={styles.example} className={classname} href='#'>{text}</a>
+                <div className={styles.example_container}>
+                    <div className={classname}>
+                        <a id={styles.example} className={classname} href='#'>{text}</a>
+                    </div>
                 </div>
+                <button onClick={() => setPopup(true)}>Get code</button>
+                <FullExample></FullExample>
             </div>
-        
-            <button onClick={() => setPopup(true)}>Get code</button>
             
             {popup && (
                 <div className={styles.form_container}>
@@ -78,7 +79,6 @@ const Form = () => {
                     </div>
                 </div>       
             )}
-
         </Fragment>
     )
 }
