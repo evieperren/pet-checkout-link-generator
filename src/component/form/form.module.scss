@@ -14,7 +14,6 @@ button {
     position: relative;
     padding: 5px;
     font-size: $font-size;
-    font-family: $font-family; 
 }
 .input_container {
     margin: 20px;
@@ -36,8 +35,7 @@ button {
     font-size: 70px;
     background-color: #fff;
     border-radius: 20px;
-    padding: 5px;
-    font-family: $font-family; 
+    padding: 5px; 
 }
 .medium a{
     font-size: 20px;
@@ -47,7 +45,7 @@ button {
     background-color: #fff;
     border-radius: 20px;
     padding: 5px;
-    font-family: $font-family; 
+ 
 }
 .small a{
     font-size: 5px;
@@ -57,7 +55,6 @@ button {
     background-color: #fff;
     border-radius: 20px;
     padding: 5px;
-    font-family: $font-family; 
 }
 .example {
     color: black;
