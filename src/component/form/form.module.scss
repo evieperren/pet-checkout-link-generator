@@ -45,6 +45,7 @@ select {
 .example_container {
     border: 1px solid $border-light;
     height: 100px;
+    margin-top: 5px;
 }
 .large a{
     border: 1px solid $border-light;
@@ -72,10 +73,6 @@ select {
     background-color: #fff;
     border-radius: 20px;
     padding: 5px;
-}
-.example {
-    color: black;
-    text-decoration: none;
 }
 .close {
     float: right;
@@ -118,6 +115,11 @@ select {
 }
 .template_title {
     margin-bottom: 0;
+}
+.subheading {
+    font-weight: normal;
+    font-size: $font-size-large;
+    margin: 10px 0 0 0;
 }
 @media only screen and (min-width: $medium-min-width) {
     .link_container { 
