@@ -3,9 +3,9 @@
 .content_container {
     grid-area: link-generator;
 }
-.content_container p {
-    text-align: center;
+.content_container_p{
     margin-bottom: 40px;
+    text-align: center;
 }
 @media only screen and (min-width: $medium-min-width) {
     .container {

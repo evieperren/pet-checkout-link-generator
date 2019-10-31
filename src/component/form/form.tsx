@@ -24,15 +24,20 @@ const Form = () => {
     }
     
     let uniqueClassname = '';
+    let styling = '';
     switch(classname){
         case 'form_large__2dtRX':
             uniqueClassname = 'large';
             console.log('i am large')
+            styling = 'border: 1px solid grey; font-size: 16px; width: 30px; font-size: 70px; background-color: #fff; border-radius: 20px; padding: 5px;'
             break;
         case 'form_small__3Ej2V':
             uniqueClassname = 'small';
+            styling = 'border: 1px solid grey; font-size: 16px; width: 30px; font-size: 70px; background-color: #fff; border-radius: 20px; padding: 5px;'
             break;
-        default: uniqueClassname = 'medium';
+        default: 
+            uniqueClassname = 'medium';
+            styling = 'border: 1px solid grey; font-size: 16px; width: 30px; font-size: 70px; background-color: #fff; border-radius: 20px; padding: 5px;'
     }
     return(
         <Fragment>
@@ -53,7 +58,7 @@ const Form = () => {
                         <a id={styles.example} className={classname} href='#'>{text}</a>
                     </div>
                 </div>
-                <button onClick={() => setPopup(true)}>Get code</button>
+                <button onClick={() => setPopup(true)} className={styles.button}>Get code</button>
                 <FullExample></FullExample>
             </div>
             
@@ -63,24 +68,16 @@ const Form = () => {
                         <a onClick={() => setPopup(false)} className={styles.close}>
                             <img className={styles.closeIcon} src={CloseIcon} alt='close popup box'/>
                         </a>
-                        <h2>Step one</h2>
-                        <p>For HTML...</p>
-                        <Template template={`<div class="${uniqueClassname}"><a href="${practiceID}">${text}</a></div>`} />
-                        <p>For HTML option 2...</p>
-                        <Template template={`<a href="${practiceID}" class="${uniqueClassname}">${text}</a>`} />
-                        <h2>Step two</h2>
-                        <p>Styling</p>
-                        <Template template={`.${uniqueClassname} {
-                            border: 1px solid grey;
-                            width: 30px;
-                            font-size: 70px;
-                            background-color: #fff;
-                            border-radius: 20px;
-                            padding: 5px;
-                        }`}></Template>
+                        <div className={styles.template_container}>
+                            <h4 className={styles.template_title}>For HTML...</h4>
+                            <Template template={`<div class="${uniqueClassname}" style="${styling}"><a href="${practiceID}">${text}</a></div>`} />
+                            <h4 className={styles.template_title}>For HTML option 2...</h4>
+                            <Template template={`<a href="${practiceID}" class="${uniqueClassname}" style="${styling}">${text}</a>`} />
+                        </div>
                     </div>
                 </div>       
             )}
+          
         </Fragment>
     )
 }
