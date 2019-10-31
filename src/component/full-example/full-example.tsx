@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import styles from './full-example.module.scss';
 
 const FullExample = () => {
     return (
-        <div>
-            <h3>Full Code Example</h3>
+        <Fragment>
+            <h3 className={styles.title}>Full code example</h3>
             <p>Copy and paste the code example to your website.</p>
             <div className={styles.code_container}>
                 <pre>
@@ -46,7 +46,7 @@ const FullExample = () => {
                     <span className={styles.blue}>&lt;/html&gt;</span>
                 </pre>
             </div>
-        </div>
+        </Fragment>
     )
 }
 

@@ -1,3 +1,9 @@
-.left_container {
-    
+.guide {
+    grid-area: guide;
+}
+.guide h3 {
+    margin-top: 0;
+}
+ol {
+    padding-left: 20px;
 }

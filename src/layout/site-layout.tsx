@@ -11,8 +11,10 @@ const SiteLayout = () => {
                 <img src={logo} alt="animal healthcare logo" className={styles.logo} />
             </div>
             <Title></Title>
-            <div className={styles.outer_content_container}>
-                <LinkGenerator></LinkGenerator>
+            <div className={styles.main_container}>
+                <div className={styles.outer_content_container}>
+                    <LinkGenerator></LinkGenerator>
+                </div>
             </div>
         </Fragment>
     )

@@ -20,13 +20,14 @@ const Form = () => {
     }
 
     function handleSelect(eventArg: React.FormEvent<HTMLSelectElement>):void{
-        setClassname(eventArg.currentTarget.value)
+        setClassname(eventArg.currentTarget.value);
     }
     
     let uniqueClassname = '';
     switch(classname){
         case 'form_large__2dtRX':
             uniqueClassname = 'large';
+            console.log('i am large')
             break;
         case 'form_small__3Ej2V':
             uniqueClassname = 'small';
@@ -36,16 +37,17 @@ const Form = () => {
     return(
         <Fragment>
             <div className={styles.input_container}>
-                <label>Input your practice ID</label>
+                <label>Your practice ID</label>
                 <input type="text" value={practiceID} onChange={handleOnChange} className={styles.input}/>
                 <label>Choose your text</label>
                 <input type="text" value={text} onChange={handleText} className={styles.input}/>
                 <label>Choose your styling</label>
-                <select onChange={handleSelect}>
+                <select onChange={handleSelect} placeholder="Please select">
                     <option value={styles.large}>Large</option>
                     <option value={styles.medium}>Medium</option>
                     <option value={styles.small}>Small</option>
                 </select>
+                <label>Preview</label>
                 <div className={styles.example_container}>
                     <div className={classname}>
                         <a id={styles.example} className={classname} href='#'>{text}</a>

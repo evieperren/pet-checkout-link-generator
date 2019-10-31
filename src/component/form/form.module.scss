@@ -8,26 +8,48 @@
     margin: 10px;
 }
 button {
-    border: 1px solid transparent;
-    background-color: $border-lighter;
-    border-radius: 20px;
-    position: relative;
-    padding: 5px;
-    font-size: $font-size;
+    display: block;
+    padding: 0.5rem 0;
+    cursor: pointer;
+    margin: 0;
+    background-color: $action-colour;  
+    border: solid $border-light 1px;
+    color: $action-text-colour;  
+    border-radius: 40px;
+    width: 100%;  
+    text-decoration: none;
+    text-align: center;
+    font-size: $font-size-small;
+    margin: 20px 0;
 }
-.input_container {
-    margin: 20px;
-}
-.input {
-  border: 1px solid $border-light;
+.input{
+  border: 1px solid $border-lighter;
   line-height: 25px;
   font-size: $font-size;
-  width: 100%;
+  width: 99%;
+  margin: 8px 0;
+  display: block;
+}
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    width: 100%;
+    border: 1px solid $border-lighter;
+    font-size: $font-size;
+    background-color: #fff;
+    border-radius: 0;
+    height: 30px;
+    margin: 8px 0;
+    background-image: url(../../assets/images/angle-down-solid.svg);
+    background-repeat: no-repeat, repeat;
+    background-position: right .7em top 50%, 0 0;
+    background-size: 1rem; 
 }
 .example_container {
     border: 1px solid $border-light;
     height: 100px;
-    margin: 20px;
 }
 .large a{
     border: 1px solid $border-light;
@@ -68,7 +90,9 @@ button {
 .closeIcon {
     width: 15px;
 }
-
+.input_container {
+    grid-area: form;
+}
 @media only screen and (min-width: $medium-min-width) {
     .form_container {
         display: grid;
@@ -94,8 +118,7 @@ button {
         border-radius: 5px;  
         background: white; 
     }
-    .input{
-        width: 300px;
-        display: block;
+    button {
+        width: 70%;
     }
 }
