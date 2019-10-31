@@ -1,0 +1,30 @@
+@import "../../assets/base/colour";
+@import "../../assets/base/typograghy";
+
+.template_block {
+    background-color: #F0F1F2;
+    padding: 10px;
+} 
+
+.button {
+    display: block;
+    padding: 0.5rem 0;
+    cursor: pointer;
+    margin: 0;
+    background-color: $action-colour;  
+    border: solid $border-light 1px;
+    color: $action-text-colour;  
+    border-radius: 40px;
+    width: 100px;  
+    text-decoration: none;
+    text-align: center;
+    font-size: $font-size-small;
+    margin: 20px 0;
+}   
+.p {
+    text-align: left;
+    font-size: $font-size-small;
+}
+h4 {
+    font-weight: normal;
+}

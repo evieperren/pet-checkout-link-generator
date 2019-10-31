@@ -1,8 +1,10 @@
 @font-face {
     font-family: 'FSElliot';
     src: local('FSElliot'), url(./FSElliotWeb-Regular.woff) format('woff');
+    font-weight: normal;
 } 
 @font-face {
-    font-family: 'FSElliotLight';
+    font-family: 'FSElliot';
     src: local('FSElliotLight') url(./fselliot-light-webfont.woff) format('woff');
+    font-weight: 100;
 }

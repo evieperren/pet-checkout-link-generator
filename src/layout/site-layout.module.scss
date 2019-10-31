@@ -1,0 +1,43 @@
+@import "../assets/base/colour";
+@import "../assets/base/typograghy";
+@import "../assets/base/responsive";
+
+body {
+  font-family: $font-family;
+  margin: 0;
+  font-size: $font-size;
+  line-height: 23px;
+}
+.main_container {
+    margin: 0 20px;
+}
+.header_container {
+  border-bottom: 1px solid $border-lighter;
+  text-align: center;
+  box-shadow: 0 0 #fff;
+}
+
+.logo{
+  width: 250px;
+  padding: 5px 0;
+}
+@media only screen and (min-width: $medium-min-width) {
+  .outer_content_container{
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "left link-generator right";
+  }
+  .header_container {
+    text-align: left;
+  }
+  .logo {
+    width: 270px;
+    padding: 5px 0 5px 5%;
+  }
+}
+@media only screen and (min-width: $large-min-width) {
+  .outer_content_container{
+    grid-template-columns: 1.5fr 8fr 1.5fr;
+  }
+}
