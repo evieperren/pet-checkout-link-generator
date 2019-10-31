@@ -46,33 +46,63 @@ select {
     border: 1px solid $border-light;
     height: 100px;
     margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.large a{
-    border: 1px solid $border-light;
-    width: 30px;
-    font-size: 70px;
-    background-color: #fff;
-    border-radius: 20px;
-    padding: 5px; 
+.large {
+    background-color: $highlight-colour-dark;
+    width: 140px;
+    height: 45px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    color: #fff;
+
+    & a {
+        font-size: $font-size-large;
+        text-decoration: none;
+    }
+    & img {
+        width: 40px;
+    }
 }
-.medium a{
-    font-size: 20px;
-    border: 1px solid $border-light;
-    width: 30px;
-    font-size: 50px;
-    background-color: #fff;
-    border-radius: 20px;
-    padding: 5px;
- 
+.medium {
+    background-color: $highlight-colour-dark;
+    width: 120px;
+    height: 40px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    color: #fff;
+
+    & a {
+        font-size: $font-size;
+        text-decoration: none;
+    }
+    & img {
+        width: 35px;
+    }
 }
-.small a{
-    font-size: 5px;
-    border: 1px solid $border-light;
-    width: 30px;
-    font-size: 20px;
-    background-color: #fff;
-    border-radius: 20px;
-    padding: 5px;
+.small {
+    background-color: $highlight-colour-dark;
+    width: 100px;
+    height: 35px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    color: #fff;
+
+    & a {
+        font-size: $font-size-small;
+        text-decoration: none;
+    }
+    & img {
+        width: 30px;
+    }
 }
 .close {
     float: right;
