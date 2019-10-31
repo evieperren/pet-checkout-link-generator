@@ -2,11 +2,6 @@
 @import "../../assets/base/media-queries";
 @import "../../assets/base/colour";
 
-.block {
-    background-color: $border-lightest;
-    padding: 10px;
-    margin: 10px;
-}
 button {
     display: block;
     padding: 0.5rem 0;
@@ -93,30 +88,44 @@ select {
 .input_container {
     grid-area: form;
 }
+.form_container {
+    display: grid;
+    grid-template-columns: 0.25fr 1fr 0.25fr;
+    position: fixed;  
+    width: 100%;  
+    top: 0;  
+    left: 0;  
+    right: 0;  
+    bottom: 0;  
+    margin: auto;  
+    background-color: rgba(0,0,0, 0.6);
+}
+.link_container {
+    grid-column-start: 2;
+    border: 1px solid $border-lighter;
+    position: absolute;  
+    padding: 10px;
+    left: 3%;  
+    right: 25%;  
+    top: 5%;   
+    margin: auto;   
+    background: white; 
+    text-align: left;
+    height: 700px;
+}
+.template_container {
+    padding: 20px;
+}
+.template_title {
+    margin-bottom: 0;
+}
 @media only screen and (min-width: $medium-min-width) {
-    .form_container {
-        display: grid;
-        grid-template-columns: 0.25fr 1fr 0.25fr;
-        position: fixed;  
-        width: 100%;  
-        top: 0;  
-        left: 0;  
-        right: 0;  
-        bottom: 0;  
-        margin: auto;  
-        background-color: rgba(0,0,0, 0.5);
-    }
-    .link_container {
-        grid-column-start: 2;
-        border: 1px solid $border-lighter;
-        padding: 10px;
-        position: absolute;  
+    .link_container { 
         left: 5%;  
         right: 25%;  
-        top: 25%;    
-        margin: auto;  
-        border-radius: 5px;  
-        background: white; 
+        top: 15%;   
+        bottom: 15%; 
+        height: 500px; 
     }
     button {
         width: 70%;
