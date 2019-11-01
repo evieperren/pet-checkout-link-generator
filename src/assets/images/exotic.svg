@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="62px" height="62px" viewBox="0 0 62 62" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Icon/exotic</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Icon/exotic" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="Artboard-42" transform="translate(3.000000, 6.000000)" stroke="#464646" stroke-width="2">
+            <path d="M21.9909751,28.040539 L13.8658032,37.7726991 C8.99070001,43.4497925 14.3614387,50.7083619 21.9909751,49.9378992 C21.9909751,49.9378992 26.9229545,49.1268859 28.4911127,49.1268859 C29.8967674,49.1268859 34.9912502,49.9378992 34.9912502,49.9378992 C42.7345391,50.7489125 47.9915254,43.4497925 43.1164222,37.7726991 L34.9912502,28.040539 C33.3842396,26.1140402 31.0026177,25 28.4911127,25 C25.9796076,25 23.5979857,26.1140402 21.9909751,28.040539 Z" id="Path"></path>
+            <ellipse id="Oval" transform="translate(37.056564, 9.867365) rotate(-85.040000) translate(-37.056564, -9.867365) " cx="37.0565639" cy="9.8673649" rx="9.06491687" ry="6.56347289"></ellipse>
+            <ellipse id="Oval" transform="translate(18.944052, 9.866887) rotate(-4.960000) translate(-18.944052, -9.866887) " cx="18.9440516" cy="9.86688684" rx="6.56347289" ry="9.06491687"></ellipse>
+            <ellipse id="Oval" transform="translate(47.353857, 25.087075) rotate(-73.800000) translate(-47.353857, -25.087075) " cx="47.3538568" cy="25.0870748" rx="7.94684263" ry="6.00299157"></ellipse>
+            <ellipse id="Oval" transform="translate(8.645882, 25.090136) rotate(-16.200000) translate(-8.645882, -25.090136) " cx="8.64588162" cy="25.0901364" rx="6.00299157" ry="7.94684263"></ellipse>
+        </g>
+    </g>
+</svg>

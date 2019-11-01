@@ -1,7 +1,7 @@
 import React from "react";
 import SiteLayout from "./layout/site-layout";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
+import "./App.module.scss"
 const App: React.FC = () => {
   console.log('render app');
 
