@@ -13,3 +13,9 @@ describe('Addition', () => {
     expect(2 + 2).toBe(4);
   });
 });
+
+describe('My Test Suite', () => {
+  it('My Test Case', () => {
+    expect(true).toEqual(true);
+  });
+});
