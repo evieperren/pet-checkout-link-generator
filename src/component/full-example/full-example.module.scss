@@ -1,4 +1,5 @@
 @import "../../assets/base/typograghy";
+@import "../../assets/base/colour";
 
 .code_container {
     background-color: #000;
@@ -16,26 +17,26 @@ pre {
     margin: 0;
 }
 .blue {
-    color: aqua;
+    color: $highlight-colour-dark;
 }
 .first_indent {
-    color: aqua;
+    color: $highlight-colour-dark;
     padding-left: 20px;
 }
 .second_indent{
-    color: aqua;
+    color: $highlight-colour-dark;
     padding-left: 40px;
 }
 .third_indent {
-    color: aqua;
+    color: $highlight-colour-dark;
     padding-left: 60px;
 }
 .white {
     color: #fff;
 }
 .pink {
-    color: pink;
+    color: rgb(231, 40, 72);
 }
 .green {
-    color: green;
+    color: rgb(49, 172, 49);
 }

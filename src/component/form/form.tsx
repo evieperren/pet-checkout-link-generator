@@ -5,7 +5,6 @@ import FullExample from "../full-example/full-example";
 import paw from "../../assets/images/exotic.svg";
 import CloseIcon from '../../assets/images/times-solid.svg';
 
-
 const Form = () => {
     const [practiceID, setPracticeID] = useState('');
     const [text, setText] = useState('Click here');
@@ -95,7 +94,7 @@ const Form = () => {
                             <img className={styles.closeIcon} src={CloseIcon} alt='close popup box'/>
                         </a>
                         <div className={styles.template_container}>
-                            <h4 className={styles.template_title}>For HTML...</h4>
+                            <h4 className={styles.template_title}>Copy into your website...</h4>
                             <Template template={`<div class="${uniqueClassname}" style="${styleDiv}">
                             <img src=${paw} style="${styleImage}" alt="paw"/>
                             <a href="${practiceID}" style="${styleAnchor}" target="_blank">${text}</a></div>`} />
