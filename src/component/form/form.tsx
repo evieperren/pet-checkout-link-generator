@@ -2,6 +2,7 @@ import React, { useState, Fragment, useEffect } from 'react';
 import styles from './form.module.scss';
 import Template from '../template/template';
 import CloseIcon from '../../assets/images/times-solid.svg';
+import RequiredField from "../required-field/required-field";
 
 export type ColourScheme = { value: "Black", displayName: "Black" } | { value: "DarkBlue", displayName: "Dark Blue" } | { value: "Maroon", displayName: "Maroon" } | { value: "Green", displayName: "Green" };
 
@@ -42,6 +43,8 @@ const Form = () => {
     }, [colourScheme]);
 
     console.log(colourSetting);
+    
+    
 
     const htmlContent = `<div style="
         font-family: Arial, Helvetica, sans-serif; 
@@ -58,7 +61,7 @@ const Form = () => {
         font-size: 16px;
         margin: 20px 0;
         width: 300px;">
-        <a href="${practiceID}" target="_blank" style="color: white;
+        <a href="https://www.simplyhealth.co.uk/vets-plan/animalhealthcare-pet-checkout/?practiceID=${practiceID}${returnURL}" target="_blank" style="color: white;
         text-decoration: none;">${text}</a></div>`;
 
     function handleOnChange(eventArg: React.FormEvent<HTMLInputElement>): void {
@@ -86,7 +89,7 @@ const Form = () => {
     return (
         <Fragment>
             <div className={styles.input_container}>
-                
+                <RequiredField></RequiredField>
                 <label htmlFor="practiceID" className={styles.subheading}>Your practice ID*</label>
                 <input type="text" name="practiceID" value={practiceID} onChange={handleOnChange} className={styles.input} />
 
