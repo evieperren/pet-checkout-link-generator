@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import styles from "./guide.module.scss";
 
 const Guide = () => {
@@ -6,7 +6,7 @@ const Guide = () => {
         <div className={styles.guide}>
             <h3>Step by step guide</h3>
             <ol>
-                <li>Enter your 6 digit code - this would be given to your by the AHC representative</li>
+                <li><p>Enter your practice ID</p> Your practice ID will be provided to you as a part of your joining instructions. The practice ID is specific to your practice, it's used to look up your practice details and plans. For example if your practice is '12345', the URL will look like:<p> https://www.simplyhealth.co.uk/animalhealthcare-checkout/?practiceid=<span className={styles.highlight}>12345</span></p></li>
                 <br/>
                 <li>Enter the text to display on your button - this is what the customer will see and click on</li>
                 <br />

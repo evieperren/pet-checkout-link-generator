@@ -26,7 +26,6 @@ const Form = () => {
     useEffect(() => {
         switch (colourScheme.value) {
             case "DarkBlue":
-                // setColourSettings({ colour: styles.white, background: styles.blue });
                 setColourSettings({ colour: "white", background: "darkblue"});
                 break;
             case "Maroon":
@@ -44,8 +43,23 @@ const Form = () => {
 
     console.log(colourSetting);
 
-    const htmlContent = `<div style="font-family: Arial, Helvetica, sans-serif; background-color: ${colourSetting.background}; width: 140px; height: 45px; border-radius: 15px; display: flex; align-items: center; padding: 2px;"><a href="${practiceID}" target="_blank">${text}</a></div>`;
-
+    const htmlContent = `<div style="
+        font-family: Arial, Helvetica, sans-serif; 
+        background-color: ${colourSetting.background}; 
+        display: block;
+        padding: 0.5rem 0;
+        cursor: pointer;
+        margin: 0;
+        border: solid #8C8C8C 1px;
+        color: ${colourSetting.colour};
+        border-radius: 40px;
+        text-decoration: none;
+        text-align: center;
+        font-size: 16px;
+        margin: 20px 0;
+        width: 300px;">
+        <a href="${practiceID}" target="_blank" style="color: white;
+        text-decoration: none;">${text}</a></div>`;
 
     function handleOnChange(eventArg: React.FormEvent<HTMLInputElement>): void {
         setPracticeID(eventArg.currentTarget.value);
@@ -72,20 +86,25 @@ const Form = () => {
     return (
         <Fragment>
             <div className={styles.input_container}>
-                <label htmlFor="practiceID" className={styles.subheading}>Your practice ID</label>
+                
+                <label htmlFor="practiceID" className={styles.subheading}>Your practice ID*</label>
                 <input type="text" name="practiceID" value={practiceID} onChange={handleOnChange} className={styles.input} />
 
                 <label htmlFor="returnURL" className={styles.subheading}>Your return URL</label>
                 <input type="text" name="returnURL" value={returnURL} onChange={handleReturnURL} className={styles.input} />
 
-                <label htmlFor="button-text" className={styles.subheading}>Choose your text</label>
+                <label htmlFor="button-text" className={styles.subheading}>Choose your text*</label>
                 <select onChange={handleText} placeholder="Please select" id="button-text">
-                    <option value="Click here">Click here</option>
-                    <option value="Purchase">Purchase</option>
-                    <option value="Buy">Buy</option>
+                    <option value="Click here to join">Click here to join</option>
+                    <option value="Click to join our health plan">Click to join our health plan</option>
+                    <option value="Click here to add your pet">Click here to add your pet</option>
+                    <option value="Join">Join</option>
+                    <option value="Add your pet to our health plan">Add your pet to our health plan</option>
+                    <option value="Health plan application">Health plan application</option>
+                    <option value="Apply now">Apply now</option>
                 </select>
 
-                <label htmlFor="size" className={styles.subheading}>Choose your styling</label>
+                <label htmlFor="size" className={styles.subheading}>Choose your styling*</label>
                 <select onChange={handleSelect} placeholder="Please select" id="size" value={colourScheme.value}>
                     {AllColourSchemes.map((cs, index) => <option key={index} value={cs.value}>{cs.displayName}</option>)}
                 
@@ -95,10 +114,6 @@ const Form = () => {
                     {isRendered && (
                         <div dangerouslySetInnerHTML={{
                             __html: htmlContent} } />
-                        // <div className={colourSetting.background}>
-                        //     <a className={colourSetting.colour} id={styles.example} href='#'>{text}</a>
-                            
-                        // </div>
                     )}
                 </div>
                 <button onClick={() => setPopup(true)} className={styles.button}>Get code</button>
@@ -117,7 +132,6 @@ const Form = () => {
                     </div>
                 </div>
             )}
-
         </Fragment>
     )
 }
