@@ -7,12 +7,12 @@
     margin-bottom: 40px;
     text-align: center;
 }
+
 @media only screen and (min-width: $medium-min-width) {
     .container {
         display: grid;
-        grid-column-gap: 2.5rem;
-        grid-template-columns: 2fr 2fr; 
-        grid-template-areas: "guide form form";
-        justify-items: stretch;
+        grid-column-gap: 9%;
+        grid-template-columns: 45% 40%; 
+        grid-template-areas: "guide form";
     }
 }

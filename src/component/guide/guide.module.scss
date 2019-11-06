@@ -4,6 +4,17 @@
 .guide h3 {
     margin-top: 0;
 }
+.guide h4 {
+    font-weight: bold;
+}
 ol {
     padding-left: 20px;
+}
+.highlight {
+    color: green;
+}
+.example {
+    overflow: scroll;
+    background-color: lightgrey;
+    padding: 5px;
 }
