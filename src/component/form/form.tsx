@@ -15,7 +15,7 @@ export const AllColourSchemes: Array<ColourScheme> = [
 
 const Form = () => {
     const [practiceID, setPracticeID] = useState('');
-    const [text, setText] = useState('Click here');
+    const [text, setText] = useState('');
     const [popup, setPopup] = useState(false);
     const [isRendered, showRender] = useState(false)
     const [returnURL, setReturnURL] = useState('');
@@ -62,7 +62,8 @@ const Form = () => {
         text-align: center;
         font-size: 16px;
         margin: 20px 0;
-        width: 300px;">
+        width: 260px;
+        height: 23px;">
         <a href="https://www.simplyhealth.co.uk/vets-plan/animalhealthcare-pet-checkout/?practiceID=${practiceID}${fullReturnURL}" target="_blank" style="color: white;
         text-decoration: none;">${text}</a></div>`;
 
