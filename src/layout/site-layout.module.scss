@@ -18,7 +18,7 @@
 @media only screen and (min-width: $medium-min-width) {
   .outer_content_container{
     display: grid;
-    grid-template-columns: 1fr 8fr 1fr;
+    grid-template-columns: 0fr 8fr 0fr;
     grid-template-rows: 1fr;
     grid-template-areas: "left link-generator right";
   }

@@ -6,7 +6,7 @@ import styles from './link-generator.module.scss';
 const LinkGenerator = () => {
     return (
         <div className={styles.content_container}>
-            <p className={styles.content_container_p}>Below is a step by step guide for allowing your customers to start a path to purchase via our checkout. It works by using your individual code to send customers directly to our checkout on behalf of your practice. Plans you have allowed to be sold online will generate for them to be selected. We will collect the customers and their pet’s details to be sent to your systems. </p>
+            <p className={styles.content_container_p}>Below is a step by step guide for allowing your customers to start a path to purchase via our checkout. Each practice has a unique 'Pets Online Join' web page. To access your specific web page you will need to know your specific URL. Below will explain how to find out your practice URL and create a button to use on your website.</p>
             <div className={styles.container}>
                 <Guide></Guide>
                 <Form></Form>
