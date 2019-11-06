@@ -19,6 +19,7 @@ const Form = () => {
     const [popup, setPopup] = useState(false);
     const [isRendered, showRender] = useState(false)
     const [returnURL, setReturnURL] = useState('');
+    const [button, showButton] = useState(false);
 
     const [colourScheme, setColourScheme] = useState<ColourScheme>({value: "Black", displayName: "Black"});
     const [colourSetting, setColourSettings] = useState({ colour: "white", background: "black" });
@@ -41,10 +42,11 @@ const Form = () => {
         }
         
     }, [colourScheme]);
-
-    console.log(colourSetting);
     
-    
+    let fullReturnURL = '';
+    if (returnURL) {
+        fullReturnURL = `&returnURL=${returnURL}`;
+    }
 
     const htmlContent = `<div style="
         font-family: Arial, Helvetica, sans-serif; 
@@ -53,7 +55,7 @@ const Form = () => {
         padding: 0.5rem 0;
         cursor: pointer;
         margin: 0;
-        border: solid #8C8C8C 1px;
+        border: solid ${colourSetting.background} 1px;
         color: ${colourSetting.colour};
         border-radius: 40px;
         text-decoration: none;
@@ -61,15 +63,18 @@ const Form = () => {
         font-size: 16px;
         margin: 20px 0;
         width: 300px;">
-        <a href="https://www.simplyhealth.co.uk/vets-plan/animalhealthcare-pet-checkout/?practiceID=${practiceID}${returnURL}" target="_blank" style="color: white;
+        <a href="https://www.simplyhealth.co.uk/vets-plan/animalhealthcare-pet-checkout/?practiceID=${practiceID}${fullReturnURL}" target="_blank" style="color: white;
         text-decoration: none;">${text}</a></div>`;
 
     function handleOnChange(eventArg: React.FormEvent<HTMLInputElement>): void {
         setPracticeID(eventArg.currentTarget.value);
         if (practiceID === '') {
             showRender(false);
+            showButton(false);
+
         } else {
             showRender(true);
+            showButton(true);
         }
     }
     function handleReturnURL(eventArg: React.FormEvent<HTMLInputElement>): void {
@@ -85,16 +90,16 @@ const Form = () => {
             setColourScheme(colourScheme);
         }
     }
-
+    
     return (
         <Fragment>
             <div className={styles.input_container}>
                 <RequiredField></RequiredField>
                 <label htmlFor="practiceID" className={styles.subheading}>Your practice ID*</label>
-                <input type="text" name="practiceID" value={practiceID} onChange={handleOnChange} className={styles.input} />
+                <input type="number" name="practiceID" value={practiceID} onChange={handleOnChange} className={styles.input} required/>
 
                 <label htmlFor="returnURL" className={styles.subheading}>Your return URL</label>
-                <input type="text" name="returnURL" value={returnURL} onChange={handleReturnURL} className={styles.input} />
+                <input type="url" name="returnURL" value={returnURL} onChange={handleReturnURL} className={styles.input} placeholder="https://yourvetpractice.com"/>
 
                 <label htmlFor="button-text" className={styles.subheading}>Choose your text*</label>
                 <select onChange={handleText} placeholder="Please select" id="button-text">
@@ -119,7 +124,7 @@ const Form = () => {
                             __html: htmlContent} } />
                     )}
                 </div>
-                <button onClick={() => setPopup(true)} className={styles.button}>Get code</button>
+                {button && <button onClick={() => setPopup(true)} className={styles.button}>Get code</button>} 
             </div>
 
             {popup && (
