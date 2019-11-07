@@ -1,3 +1,7 @@
+Pet checkout link generator.
+
+This has been created to help vet practice's create a link to be able to access the pet plan checkout. 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
